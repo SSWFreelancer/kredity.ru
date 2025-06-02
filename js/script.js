@@ -599,7 +599,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	if(selects){
 		selects.forEach((select) => {
 			var searchable = select.hasAttribute('searchable');
-			var options = {searchable: searchable};
+			var options = {searchable: searchable, placeholder: select.getAttribute('data-placeholder'), selectedtext: select.getAttribute('data-selectedtext')};
 			NiceSelect.bind(select,  options);
 		})
 	}
@@ -611,5 +611,57 @@ document.addEventListener('DOMContentLoaded', function(){
 				calcVal.previousElementSibling.focus();
 			});
 		})
+	}
+
+	const countrySearch = document.querySelector('.bank__country-search input');
+	let swiperCountries = null;
+	
+	function initSwiperCountries() {
+
+		if (swiperCountries) swiperCountries.destroy(true, true);
+	
+		swiperCountries = new Swiper('.bank__countries', {
+			slidesPerView: "auto",
+			spaceBetween: 30,
+			loop: false,
+			speed: 600,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 24,
+				},
+				768: {
+					spaceBetween: 30,
+				},
+			},
+		});
+	}
+	
+	function filterCountries(query) {
+		const slides = document.querySelectorAll('.bank__countries .swiper-slide');
+		const lowerQuery = query.toLowerCase();
+		slides.forEach(slide => {
+			const title = slide.textContent?.toLowerCase() || '';
+			if (title.includes(lowerQuery)) {
+				slide.classList.remove('hide');
+			} else {
+				slide.classList.add('hide');
+			}
+		});
+		initSwiperCountries();
+	}
+	
+	if (countrySearch) {
+		countrySearch.addEventListener('input', function () {
+			filterCountries(this.value);
+		});
+	}
+	
+	if (document.querySelector('.bank__countries')) {
+		initSwiperCountries();
 	}
 });
