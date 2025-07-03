@@ -1383,8 +1383,9 @@ body {
       gap: 14px;
     }
     @media(max-width: $xs) {
-      flex-wrap: wrap-reverse;
+      // flex-wrap: wrap-reverse;
       row-gap: 10px;
+      align-items: flex-end;
     }
   }
 
@@ -1397,6 +1398,7 @@ body {
     gap: 10px;
     flex: 1 1 auto;
     transition: all 0.3s ease 0s;
+    word-break: break-word;
     @media(any-hover: hover) {
       &:hover{
         box-shadow: 0 4px 9px 0 rgba(44, 52, 59, 0.25);
