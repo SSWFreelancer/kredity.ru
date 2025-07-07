@@ -243,7 +243,12 @@ select:nth-of-type(6)+.nice-select {
 }
 
 .nice-select .list::-webkit-scrollbar {
-  width: 0;
+  width: 6px;
+  border-radius: 8px;
+}
+.nice-select .list::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background-color: #0d8bff;
 }
 
 .nice-select .has-multiple {
