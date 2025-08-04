@@ -429,10 +429,10 @@ document.addEventListener('DOMContentLoaded', function(){
 				slideChangeTransitionStart: function () {
 					const slides = this.slides;
 					const activeSlide = slides[this.activeIndex];
-					activeSlide.classList.add('effect');
+					activeSlide?.classList.add('effect');
 					this.update();
 					setTimeout(() => {
-						activeSlide.classList.remove('effect');
+						activeSlide?.classList.remove('effect');
 					}, 250);
 				}
 			},
@@ -452,6 +452,65 @@ document.addEventListener('DOMContentLoaded', function(){
 					spaceBetween: 24,
 					allowTouchMove: false,
 				}
+			},
+		});
+	}
+	if(document.querySelector('.reviews__letters')){
+		new Swiper('.reviews__letters', {
+			slidesPerView: 4,
+			spaceBetween: 24,
+			speed: 600,
+			autoHeight: true,
+			navigation: {
+				nextEl: '.reviews-letters__next',
+				prevEl: '.reviews-letters__prev',
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 15,
+				},
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 18,
+				},
+				900:{
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1161:{
+					slidesPerView: 4,
+					spaceBetween: 24,
+				},
+			},
+		});
+	}
+	if(document.querySelector('.reviews__socials')){
+		new Swiper('.reviews__socials', {
+			slidesPerView: 4,
+			spaceBetween: 24,
+			speed: 600,
+			navigation: {
+				nextEl: '.reviews-socials__next',
+				prevEl: '.reviews-socials__prev',
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 15,
+				},
+				600: {
+					slidesPerView: 2,
+					spaceBetween: 18,
+				},
+				900:{
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1161:{
+					slidesPerView: 4,
+					spaceBetween: 24,
+				},
 			},
 		});
 	}
@@ -664,4 +723,33 @@ document.addEventListener('DOMContentLoaded', function(){
 	if (document.querySelector('.bank__countries')) {
 		initSwiperCountries();
 	}
+
+	var tabsItems = document.querySelectorAll('[data-tab]');
+	if(tabsItems){
+		tabsItems.forEach(function(tabsItem) {
+			tabsItem.addEventListener('click', function(event) {
+				event.preventDefault();
+				var tabParent = this.closest('.tabs');
+				var tabActive = tabParent.querySelector('[data-tab].active');
+				var contentActive = tabParent.querySelectorAll('[data-content].target');
+				if (tabActive) {
+					tabActive.classList.remove('active');
+				}
+				contentActive.forEach(function(contentActive){
+					if (contentActive) {
+						contentActive.classList.remove('target');
+					}	  
+				});
+				this.classList.add('active');
+				const tabContent = this.getAttribute("data-tab");
+				const tabId = tabParent.querySelectorAll(`[data-content="${tabContent}"]`);
+				tabId.forEach(function(tabId){
+					if (tabId) {
+						tabId.classList.add('target');
+					}	  
+				});
+			});
+		});
+	}
+
 });

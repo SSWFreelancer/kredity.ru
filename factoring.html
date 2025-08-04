@@ -1062,9 +1062,6 @@
 				<div class="bank">
 					<div class="bank__container">
 						<h2 class="title">
-							Банки с которыми <span>мы сотрудничаем</span>
-						</h2>
-						<h2 class="title center for-mobile">
 							Банки <span>партнеры</span>
 						</h2>
 						<div class="bank__items">
@@ -1476,7 +1473,7 @@
 						<div class="suggest__top">
 							<div class="suggest__left">
 								<h2 class="title">
-									Лучший факторинг<span> для бизнеса за месяц</span>
+									Лучшее <span>месяца</span>
 								</h2>
 								<div class="suggest__head">
 									<h2 class="title">
@@ -1766,17 +1763,25 @@
 					</div>
 				</div>
 				<div class="reviews" id="reviews">
-					<div class="reviews__container">
+					<div class="reviews__container tabs">
 						<div class="reviews__top">
 							<div class="reviews__left">
 								<h2 class="title">
-									Отзывы и успешные <span>кейсы</span>
+									Кейсы <span>и отзывы</span>
 								</h2>
 								<div class="reviews__head">
 									<h2 class="title">
 										Кейсы <span>и отзывы</span>
 									</h2>
-									<div class="arrows">
+									<div class="arrows target" data-content="reviews1">
+										<div class="arrow reviews-letters__prev">
+											<img loading="lazy" src="img/slider-arrow.svg" alt="">
+										</div>
+										<div class="arrow reviews-letters__next">
+											<img loading="lazy" src="img/slider-arrow.svg" alt="">
+										</div>
+									</div>
+									<div class="arrows" data-content="reviews2">
 										<div class="arrow reviews__prev">
 											<img loading="lazy" src="img/slider-arrow.svg" alt="">
 										</div>
@@ -1784,15 +1789,31 @@
 											<img loading="lazy" src="img/slider-arrow.svg" alt="">
 										</div>
 									</div>
+									<div class="arrows" data-content="reviews3">
+										<div class="arrow reviews-socials__prev">
+											<img loading="lazy" src="img/slider-arrow.svg" alt="">
+										</div>
+										<div class="arrow reviews-socials__next">
+											<img loading="lazy" src="img/slider-arrow.svg" alt="">
+										</div>
+									</div>									
 								</div>
 								<div class="reviews__nav">
-									<a href="" class="active">Текстовые отзывы</a>
-									<a href="">Благодарственные письма</a>
-									<a href="">Отзывы в мессенджерах</a>
-									<a href="">Аудио отзывы</a>
+									<a href="" data-tab="reviews1" class="active">Благодарственные письма</a>
+									<a href="" data-tab="reviews2">Текстовые отзывы</a>
+									<a href="" data-tab="reviews3">Отзывы в мессенджерах</a>
+									<a href="" data-tab="reviews4">Аудио отзывы</a>
 								</div>
 							</div>
-							<div class="arrows">
+							<div class="arrows target" data-content="reviews1">
+								<div class="arrow reviews-letters__prev">
+									<img loading="lazy" src="img/slider-arrow.svg" alt="">
+								</div>
+								<div class="arrow reviews-letters__next">
+									<img loading="lazy" src="img/slider-arrow.svg" alt="">
+								</div>
+							</div>
+							<div class="arrows" data-content="reviews2">
 								<div class="arrow reviews__prev">
 									<img loading="lazy" src="img/slider-arrow.svg" alt="">
 								</div>
@@ -1800,430 +1821,494 @@
 									<img loading="lazy" src="img/slider-arrow.svg" alt="">
 								</div>
 							</div>
+							<div class="arrows" data-content="reviews3">
+								<div class="arrow reviews-socials__prev">
+									<img loading="lazy" src="img/slider-arrow.svg" alt="">
+								</div>
+								<div class="arrow reviews-socials__next">
+									<img loading="lazy" src="img/slider-arrow.svg" alt="">
+								</div>
+							</div>
 						</div>
-						<div class="reviews__slider swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/1.png" alt="">
-												</div>
-												<div class="reviews__texts">
-													<p>
-														Андрей Индусов
-													</p>
-													<span>
-														АОА Индийские специи
-													</span>
-												</div>
-											</div>
-											<div class="reviews__tag">
-												44-ФЗ
-											</div>
-										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
-											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
-											</div>
-										</div>
+						<div class="reviews__tab target" data-content="reviews1">
+							<div class="reviews__letters swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="img/reviews/letter.png" alt="">
 									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
-										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
-										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
-										</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/letter.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/letter.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/letter.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/letter.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/letter.png" alt="">
 									</div>
 								</div>
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/2.png" alt="">
+							</div>
+							<a href="" class="reviews__more"> 
+								Все письма
+							</a>
+						</div>
+						<div class="reviews__tab" data-content="reviews2">
+							<div class="reviews__slider swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/1.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Андрей Индусов
+														</p>
+														<span>
+															АОА Индийские специи
+														</span>
+													</div>
 												</div>
-												<div class="reviews__texts">
-													<p>
-														Игорь Вятки
-													</p>
-													<span>
-														Предприниматель
-													</span>
+												<div class="reviews__tag">
+													44-ФЗ
 												</div>
 											</div>
-											<div class="reviews__tag">
-												44-ФЗ
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
+												</div>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+												</div>
 											</div>
 										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
 											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
 											</div>
 										</div>
 									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
-										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
-										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/3.png" alt="">
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/2.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Игорь Вятки
+														</p>
+														<span>
+															Предприниматель
+														</span>
+													</div>
 												</div>
-												<div class="reviews__texts">
-													<p>
-														Александр Ватутинков
-													</p>
-													<span>
-														Предприниматель
-													</span>
+												<div class="reviews__tag">
+													44-ФЗ
 												</div>
 											</div>
-											<div class="reviews__tag">
-												44-ФЗ
-											</div>
-										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
-											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
-											</div>
-										</div>
-									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
-										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
-										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/1.png" alt="">
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
 												</div>
-												<div class="reviews__texts">
-													<p>
-														Андрей Индусов
-													</p>
-													<span>
-														АОА Индийские специи
-													</span>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
 												</div>
 											</div>
-											<div class="reviews__tag">
-												44-ФЗ
-											</div>
 										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
 											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
 											</div>
 										</div>
 									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
-										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
-										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/1.png" alt="">
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/3.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Александр Ватутинков
+														</p>
+														<span>
+															Предприниматель
+														</span>
+													</div>
 												</div>
-												<div class="reviews__texts">
-													<p>
-														Андрей Индусов
-													</p>
-													<span>
-														АОА Индийские специи
-													</span>
+												<div class="reviews__tag">
+													44-ФЗ
 												</div>
 											</div>
-											<div class="reviews__tag">
-												44-ФЗ
-											</div>
-										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
-											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
-											</div>
-										</div>
-									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
-										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
-										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/2.png" alt="">
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
 												</div>
-												<div class="reviews__texts">
-													<p>
-														Игорь Вятки
-													</p>
-													<span>
-														Предприниматель
-													</span>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
 												</div>
 											</div>
-											<div class="reviews__tag">
-												44-ФЗ
-											</div>
 										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
 											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
 											</div>
 										</div>
 									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
-										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
-										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/3.png" alt="">
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/1.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Андрей Индусов
+														</p>
+														<span>
+															АОА Индийские специи
+														</span>
+													</div>
 												</div>
-												<div class="reviews__texts">
-													<p>
-														Александр Ватутинков
-													</p>
-													<span>
-														Предприниматель
-													</span>
+												<div class="reviews__tag">
+													44-ФЗ
 												</div>
 											</div>
-											<div class="reviews__tag">
-												44-ФЗ
-											</div>
-										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
-											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
-											</div>
-										</div>
-									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
-										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
-										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="reviews__content">
-										<div class="reviews__top">
-											<div class="reviews__author">
-												<div class="reviews__avatar">
-													<img loading="lazy" src="img/reviews/1.png" alt="">
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
 												</div>
-												<div class="reviews__texts">
-													<p>
-														Андрей Индусов
-													</p>
-													<span>
-														АОА Индийские специи
-													</span>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
 												</div>
 											</div>
-											<div class="reviews__tag">
-												44-ФЗ
-											</div>
 										</div>
-										<div class="reviews__center">
-											<div class="reviews__name">
-												Получил банковскую гарантию и подписал крупный контракт на строительство
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
 											</div>
-											<div class="reviews__text">
-												Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
 											</div>
 										</div>
 									</div>
-									<div class="reviews__bottom">
-										<div class="reviews__column">
-											<small>
-												Сумма:
-											</small>
-											<p>
-												170 000 000 ₽ 
-											</p>
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/1.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Андрей Индусов
+														</p>
+														<span>
+															АОА Индийские специи
+														</span>
+													</div>
+												</div>
+												<div class="reviews__tag">
+													44-ФЗ
+												</div>
+											</div>
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
+												</div>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+												</div>
+											</div>
 										</div>
-										<div class="reviews__column">
-											<small>
-												Срок:
-											</small>
-											<p>
-												до 10.04.2032
-											</p>
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
+											</div>
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
+											</div>
 										</div>
-										<div class="reviews__check">
-											<img loading="lazy" src="img/reviews/check.svg" alt="">
-											Выдан АЕ
+									</div>
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/2.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Игорь Вятки
+														</p>
+														<span>
+															Предприниматель
+														</span>
+													</div>
+												</div>
+												<div class="reviews__tag">
+													44-ФЗ
+												</div>
+											</div>
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
+												</div>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+												</div>
+											</div>
+										</div>
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
+											</div>
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/3.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Александр Ватутинков
+														</p>
+														<span>
+															Предприниматель
+														</span>
+													</div>
+												</div>
+												<div class="reviews__tag">
+													44-ФЗ
+												</div>
+											</div>
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
+												</div>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+												</div>
+											</div>
+										</div>
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
+											</div>
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="reviews__content">
+											<div class="reviews__top">
+												<div class="reviews__author">
+													<div class="reviews__avatar">
+														<img loading="lazy" src="img/reviews/1.png" alt="">
+													</div>
+													<div class="reviews__texts">
+														<p>
+															Андрей Индусов
+														</p>
+														<span>
+															АОА Индийские специи
+														</span>
+													</div>
+												</div>
+												<div class="reviews__tag">
+													44-ФЗ
+												</div>
+											</div>
+											<div class="reviews__center">
+												<div class="reviews__name">
+													Получил банковскую гарантию и подписал крупный контракт на строительство
+												</div>
+												<div class="reviews__text">
+													Vogue — это финансовый маркетплейс. Мы помогаем искать выгодные предложения, предоставляем сведения о кредитовании и других услугах, которые требуются бизнесу. С нами вы сможете провести предварительный анализ и отсеять заведомо невыгодные варианты, а также подать мультизаявку сразу в несколько банков, не выходя из дома или офиса.
+												</div>
+											</div>
+										</div>
+										<div class="reviews__bottom">
+											<div class="reviews__column">
+												<small>
+													Сумма:
+												</small>
+												<p>
+													170 000 000 ₽ 
+												</p>
+											</div>
+											<div class="reviews__column">
+												<small>
+													Срок:
+												</small>
+												<p>
+													до 10.04.2032
+												</p>
+											</div>
+											<div class="reviews__check">
+												<img loading="lazy" src="img/reviews/check.svg" alt="">
+												Выдан АЕ
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<a href="" class="reviews__more"> 
+								Все отзывы
+							</a>
 						</div>
-						<a href="" class="reviews__more">
-							Все отзывы
-						</a>
+						<div class="reviews__tab" data-content="reviews3">
+							<div class="reviews__socials swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="img/reviews/socials-review.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/socials-review.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/socials-review.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/socials-review.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/socials-review.png" alt="">
+									</div>
+									<div class="swiper-slide">
+										<img src="img/reviews/socials-review.png" alt="">
+									</div>
+								</div>
+							</div>
+							<a href="" class="reviews__more"> 
+								Все отзывы
+							</a>
+						</div>
 					</div>
 				</div>
 				<div class="faq">
@@ -2451,84 +2536,28 @@
 						<div class="journal__slider swiper">
 							<div class="swiper-wrapper">
 								<a href="" class="swiper-slide" data-fitem="банки">
-									<div class="journal__image"><img loading="lazy" src="img/journal/1.jpg" alt=""></div>
-									<div class="journal__wrapper">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/1.jpg" alt="">
 										<div class="journal__date">12 марта</div>
+									</div>
+									<div class="journal__wrapper">
 										<div class="journal__name">Краткий заголовок</div>
 										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
 										<div class="journal__author">
 											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
 											<div class="journal__info">
-											<p>Григорий Григоревич</p>
-											<span>CEO &amp; Founder</span>
+												<p>Григорий Григоревич</p>
+												<span>CEO &amp; Founder</span>
 											</div>
 										</div>
 									</div>
 								</a>
 								<a href="" class="swiper-slide" data-fitem="лайфхаки">
-									<div class="journal__image"><img loading="lazy" src="img/journal/2.jpg" alt=""></div>
-									<div class="journal__wrapper">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/2.jpg" alt="">
 										<div class="journal__date">12 марта</div>
-										<div class="journal__name">Краткий заголовок</div>
-										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
-										<div class="journal__author">
-											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
-											<div class="journal__info">
-											<p>Григорий Григоревич</p>
-											<span>CEO &amp; Founder</span>
-											</div>
-										</div>
 									</div>
-								</a>
-								<a href="" class="swiper-slide" data-fitem="акции">
-									<div class="journal__image"><img loading="lazy" src="img/journal/3.jpg" alt=""></div>
 									<div class="journal__wrapper">
-										<div class="journal__date">12 марта</div>
-										<div class="journal__name">Краткий заголовок</div>
-										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
-										<div class="journal__author">
-											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
-											<div class="journal__info">
-											<p>Григорий Григоревич</p>
-											<span>CEO &amp; Founder</span>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="" class="swiper-slide" data-fitem="банки">
-									<div class="journal__image"><img loading="lazy" src="img/journal/4.jpg" alt=""></div>
-									<div class="journal__wrapper">
-										<div class="journal__date">12 марта</div>
-										<div class="journal__name">Краткий заголовок</div>
-										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
-										<div class="journal__author">
-											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
-											<div class="journal__info">
-											<p>Григорий Григоревич</p>
-											<span>CEO &amp; Founder</span>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="" class="swiper-slide" data-fitem="банки">
-									<div class="journal__image"><img loading="lazy" src="img/journal/1.jpg" alt=""></div>
-									<div class="journal__wrapper">
-										<div class="journal__date">12 марта</div>
-										<div class="journal__name">Краткий заголовок</div>
-										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
-										<div class="journal__author">
-											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
-											<div class="journal__info">
-											<p>Григорий Григоревич</p>
-											<span>CEO &amp; Founder</span>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="" class="swiper-slide" data-fitem="лайфхаки">
-									<div class="journal__image"><img loading="lazy" src="img/journal/2.jpg" alt=""></div>
-									<div class="journal__wrapper">
-										<div class="journal__date">12 марта</div>
 										<div class="journal__name">Краткий заголовок</div>
 										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
 										<div class="journal__author">
@@ -2541,9 +2570,11 @@
 									</div>
 								</a>
 								<a href="" class="swiper-slide" data-fitem="акции">
-									<div class="journal__image"><img loading="lazy" src="img/journal/3.jpg" alt=""></div>
-									<div class="journal__wrapper">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/3.jpg" alt="">
 										<div class="journal__date">12 марта</div>
+									</div>
+									<div class="journal__wrapper">
 										<div class="journal__name">Краткий заголовок</div>
 										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
 										<div class="journal__author">
@@ -2556,9 +2587,79 @@
 									</div>
 								</a>
 								<a href="" class="swiper-slide" data-fitem="банки">
-									<div class="journal__image"><img loading="lazy" src="img/journal/4.jpg" alt=""></div>
-									<div class="journal__wrapper">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/4.jpg" alt="">
 										<div class="journal__date">12 марта</div>
+									</div>
+									<div class="journal__wrapper">
+										<div class="journal__name">Краткий заголовок</div>
+										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
+										<div class="journal__author">
+											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
+											<div class="journal__info">
+												<p>Григорий Григоревич</p>
+												<span>CEO &amp; Founder</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="swiper-slide" data-fitem="банки">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/1.jpg" alt="">
+										<div class="journal__date">12 марта</div>
+									</div>
+									<div class="journal__wrapper">
+										<div class="journal__name">Краткий заголовок</div>
+										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
+										<div class="journal__author">
+											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
+											<div class="journal__info">
+												<p>Григорий Григоревич</p>
+												<span>CEO &amp; Founder</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="swiper-slide" data-fitem="лайфхаки">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/2.jpg" alt="">
+										<div class="journal__date">12 марта</div>
+									</div>
+									<div class="journal__wrapper">
+										<div class="journal__name">Краткий заголовок</div>
+										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
+										<div class="journal__author">
+											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
+											<div class="journal__info">
+													<p>Григорий Григоревич</p>
+													<span>CEO &amp; Founder</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="swiper-slide" data-fitem="акции">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/3.jpg" alt="">
+										<div class="journal__date">12 марта</div>
+									</div>
+									<div class="journal__wrapper">
+										<div class="journal__name">Краткий заголовок</div>
+										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
+										<div class="journal__author">
+											<div class="journal__avatar"><img loading="lazy" src="img/journal/author.png" alt=""></div>
+											<div class="journal__info">
+													<p>Григорий Григоревич</p>
+													<span>CEO &amp; Founder</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="" class="swiper-slide" data-fitem="банки">
+									<div class="journal__image">
+										<img loading="lazy" src="img/journal/4.jpg" alt="">
+										<div class="journal__date">12 марта</div>
+									</div>
+									<div class="journal__wrapper">
 										<div class="journal__name">Краткий заголовок</div>
 										<div class="journal__text">Краткий под заголовок возможно в две строки даже</div>
 										<div class="journal__author">
@@ -2731,12 +2832,6 @@
 				<div class="services">
 					<div class="services__container">
 						<h2 class="title">
-							Все сервисы и услуги
-							<span>
-								Кредиты.ру<sup><img src="img/sup.svg" alt=""></sup>
-							</span>
-						</h2>
-						<h2 class="title for-mobile">
 							Все сервисы
 							<span>
 								Кредиты.ру
