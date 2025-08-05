@@ -514,7 +514,32 @@ document.addEventListener('DOMContentLoaded', function(){
 			},
 		});
 	}
-
+	if(document.querySelector('.reviews__audios')){
+		new Swiper('.reviews__audios', {
+			slidesPerView: 3,
+			spaceBetween: 24,
+			loop: false,
+			speed: 600,
+			breakpoints: {
+				0: {
+					spaceBetween: 15,
+					slidesPerView: 1,
+				},
+				768: {
+					spaceBetween: 15,
+					slidesPerView: 2,
+				},
+				1111: {
+					spaceBetween: 24,
+					slidesPerView: 3,
+				},
+			},
+			navigation: {
+				nextEl: '.reviews-audios__next',
+				prevEl: '.reviews-audios__prev',
+			}
+		});
+	}
 	if(document.querySelector('.suggest__slider')){
 		new Swiper('.suggest__slider', {
 			slidesPerView: 3,
