@@ -1292,7 +1292,7 @@ body.popuplock {
   -webkit-transition: border-color 0.3s ease 0s;
   transition: border-color 0.3s ease 0s;
 }
-.search input:not(:-moz-placeholder-shown) {
+.search input:not(:-moz-placeholder) {
   border-color: #0d8bff;
 }
 .search input:not(:-ms-input-placeholder) {
@@ -1524,7 +1524,7 @@ body.popuplock {
   -webkit-transition: border-color 0.3s ease 0s;
   transition: border-color 0.3s ease 0s;
 }
-.location input:not(:-moz-placeholder-shown) {
+.location input:not(:-moz-placeholder) {
   border-color: #0d8bff;
 }
 .location input:not(:-ms-input-placeholder) {
@@ -1533,7 +1533,7 @@ body.popuplock {
 .location input:not(:placeholder-shown) {
   border-color: #0d8bff;
 }
-.location input:not(:-moz-placeholder-shown):focus ~ .location__wrapper {
+.location input:not(:-moz-placeholder):focus ~ .location__wrapper {
   opacity: 1;
   visibility: visible;
 }
@@ -6310,7 +6310,14 @@ select {
   padding: 15px 7px 15px 14px;
   background-color: #FFFFFF;
   border-radius: 18px;
-  cursor: pointer;
+}
+@media (any-hover: hover) {
+  .reviews__audio {
+    cursor: pointer;
+  }
+}
+.reviews__audio audio {
+  display: none;
 }
 .reviews__speaker {
   border: 1px solid #E6E5E5;
@@ -6380,6 +6387,38 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+.reviews__play img {
+  width: 17px;
+  position: absolute;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-45%, -50%) scale(1);
+          transform: translate(-45%, -50%) scale(1);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.reviews__play img:nth-child(2) {
+  width: 28px;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+.reviews__audio.playing .reviews__play img:nth-child(1) {
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+}
+.reviews__audio.playing .reviews__play img:last-child {
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 .reviews__slider {
   max-width: 100%;

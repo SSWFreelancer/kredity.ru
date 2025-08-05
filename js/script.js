@@ -763,6 +763,15 @@ document.addEventListener('DOMContentLoaded', function(){
 				contentActive.forEach(function(contentActive){
 					if (contentActive) {
 						contentActive.classList.remove('target');
+						
+						const activeAudios = contentActive.querySelectorAll('.reviews__audio.playing');
+						activeAudios?.forEach((activeAudio) => {
+							const audioTag = activeAudio.querySelector('audio');
+							audioTag?.pause();
+							audioTag.currentTime = 0;
+							activeAudio.classList.remove('playing');
+						});
+
 					}	  
 				});
 				this.classList.add('active');
@@ -776,5 +785,29 @@ document.addEventListener('DOMContentLoaded', function(){
 			});
 		});
 	}
-
+	let revAudio = document.querySelectorAll('.reviews__audio');
+	if(revAudio){
+		revAudio.forEach((revAudio) => {
+			revAudio.addEventListener('click', function() {
+				const audioTag = revAudio.querySelector('audio');
+				if(audioTag){
+					if(audioTag.paused){
+						const activeAudios = document.querySelectorAll('.reviews__audio.playing');
+						activeAudios?.forEach((activeAudio) => {
+							const audioTag = activeAudio.querySelector('audio');
+							audioTag?.pause();
+							audioTag.currentTime = 0;
+							activeAudio.classList.remove('playing');
+						});
+						audioTag.play();
+						revAudio.classList.add('playing');
+					}
+					else{
+						audioTag.pause();
+						revAudio.classList.remove('playing');
+					}
+				}
+			});
+		})
+	}
 });
