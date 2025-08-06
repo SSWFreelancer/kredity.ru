@@ -2310,6 +2310,13 @@ body {
       border-radius: 12px;
       @media(max-width: $sm) {
         display: none;
+        &.hold-mobile-too {
+          display: block;
+          max-width: 180px;
+          width: 100%;
+          align-self: center;
+          border-radius: 8px;
+        }
       }
       @media(any-hover: hover) {
         &:hover{
@@ -2387,8 +2394,14 @@ body {
       height:100%;
       object-fit:cover;
     }
+    &.border{
+      border: 1px solid #E6E6E6;
+      & img{
+        object-fit: contain;
+      }
+    }
   }
-  &__search, &__country-search{
+  &__search, &__country-search, &__companies-search{
     & input{
       min-width: 0;
       width: 100%;
@@ -2489,7 +2502,48 @@ body {
       }
     }
   }
-
+  &__companies {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    & + p{
+      display: none;
+    }
+    &:not(:has(.swiper-slide:not(.hide))){
+      display: none;
+      & + p{
+        display: block;
+      }
+    }
+    & .swiper-slide{
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      border: 1px solid rgba(64, 172, 255, 0.4);
+      overflow: hidden;
+      transition: box-shadow 0.3s ease 0s;
+      &.hide{
+        display: none;
+      }
+      @media(any-hover: hover) {
+        &:hover{
+          box-shadow: 0 4px 9px 0 rgba(44, 52, 59, 0.2);
+        }
+      }
+      @media(max-width: $sm) {
+        width: 46px;
+        height: 46px;
+      }
+      & img{
+        width:100%;
+        user-select: none;
+        height:100%;
+        object-fit: contain;
+      }
+    }
+  }
   &__text{
     display: flex;
     flex-direction: column;

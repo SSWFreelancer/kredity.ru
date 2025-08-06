@@ -810,4 +810,60 @@ document.addEventListener('DOMContentLoaded', function(){
 			});
 		})
 	}
+
+	const companySearch = document.querySelector('.bank__companies-search input');
+	let swiperCompanies = null;
+	
+	function initSwiperCompanies() {
+
+		if (swiperCompanies) swiperCompanies.destroy(true, true);
+	
+		swiperCompanies = new Swiper('.bank__companies', {
+			slidesPerView: "auto",
+			spaceBetween: 95,
+			loop: false,
+			speed: 600,
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+				pauseOnMouseEnter: true
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 24,
+				},
+				1024: {
+					spaceBetween: 45,
+				},
+				1201: {
+					spaceBetween: 95,
+				},
+			},
+		});
+	}
+	
+	function filterCompanies(query) {
+		const slides = document.querySelectorAll('.bank__companies .swiper-slide');
+		const lowerQuery = query.toLowerCase();
+		slides.forEach(slide => {
+			const title = slide.getAttribute('title')?.toLowerCase() || '';
+			if (title.includes(lowerQuery)) {
+				slide.classList.remove('hide');
+			} else {
+				slide.classList.add('hide');
+			}
+		});
+		initSwiperCompanies();
+	}
+	
+	if (companySearch) {
+		companySearch.addEventListener('input', function () {
+			filterCompanies(this.value);
+		});
+	}
+	
+	if (document.querySelector('.bank__companies')) {
+		initSwiperCompanies();
+	}
+
 });
