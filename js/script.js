@@ -866,4 +866,14 @@ document.addEventListener('DOMContentLoaded', function(){
 		initSwiperCompanies();
 	}
 
+	const bargainMore = document.querySelectorAll('.bargain__more');
+	if(bargainMore) {
+		bargainMore.forEach((bargainMore) => {
+			bargainMore.addEventListener('click', function(e) {
+				e.preventDefault();
+				this.closest('.bargain__text').classList.add('open');
+			});
+		})
+	}
+
 });
