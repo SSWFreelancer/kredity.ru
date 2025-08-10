@@ -1296,6 +1296,9 @@ body {
     font-weight: 500;
     line-height: 1.5;
     color: #515B75;
+    &.regular{
+      font-weight: 400;
+    }
     & span, & a{
       color: $main;
     }
@@ -3703,9 +3706,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 26px;
+    @media(max-width: $md) {
+      & .title{
+        text-align: left;
+      }
+    }
     @media(max-width: $sm) {
       gap: 14px;
-      & .title span{
+      & .title span.hide-mobile{
         display: none;
       }
     }
