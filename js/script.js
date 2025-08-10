@@ -876,4 +876,102 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 	}
 
+	let banksTop = document.querySelectorAll('.banks__item-top');
+	if(banksTop){
+		banksTop.forEach((banksTop) => {
+			banksTop.addEventListener("click", function (e) {
+				if(e.target.closest('.no-toggle')) return;
+				banksTop.parentNode.classList.toggle('active');
+				slideToggle(banksTop.nextElementSibling);
+			});
+		});
+	}
+
+	const filterBtn = document.querySelector('.banks__filter-btn');
+	const filter = document.querySelector('.filter');
+	const filterClose = document.querySelector('.filter__close');
+	if(filterBtn && filter){
+		filterBtn.addEventListener("click", function (e) {
+			e.preventDefault();
+			filter.classList.add('open');
+			body.classList.add('filterlock');
+		});
+	}
+	if(filterClose && filter){
+		filterClose.addEventListener("click", function (e) {
+			e.preventDefault();
+			filter.classList.remove('open');
+			body.classList.remove('filterlock');
+		});
+	}
+
+	const filterRanges = document.querySelectorAll('.filter__range');
+	if(filterRanges.length){
+		filterRanges.forEach((filterRange) => {
+			let filterRangeInput = filterRange.previousElementSibling;
+			let filterMin = +filterRange.dataset.min;
+			let filterMax = +filterRange.dataset.max;
+			let filterStep = +filterRange.dataset.step;
+			let isDays = filterRange.dataset.type === 'days'; 
+
+			noUiSlider.create(filterRange, {
+				start: [filterMin],
+				connect: [true, false],
+				step: filterStep || 1,
+				range: {
+					min: filterMin,
+					max: filterMax
+				},
+			});
+
+			function formatDays(days) {
+				const years = Math.floor(days / 365);
+				const rem = days % 365; 
+				const months = Math.floor(rem / 30);
+				const d = rem % 30;
+
+				let parts = [];
+				if (years > 0) parts.push(`${years} ${declOfNum(years, ['год', 'года', 'лет'])}`);
+				if (months > 0) parts.push(`${months} мес.`);
+				if (d > 0) parts.push(`${d} ${declOfNum(d, ['день', 'дня', 'дней'])}`);
+				
+				return parts.join(' ');
+			}
+
+			function declOfNum(n, titles) {
+				return titles[
+					n % 10 === 1 && n % 100 !== 11 ? 0 :
+					n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2
+				];
+			}
+
+
+			filterRange.noUiSlider.on('slide', (values) => {
+				const value = parseInt(values[0]);
+				filterRangeInput.value = isDays
+					? formatDays(value)
+					: value.toLocaleString('ru-RU');
+			});
+
+			filterRangeInput.addEventListener('input', () => {
+				filterRangeInput.value = filterRangeInput.value.replace(/[^\d ]+/g, '');
+			});
+
+			filterRangeInput.addEventListener('change', handleInput);
+			function handleInput() {
+				let value = parseInt(filterRangeInput.value.replace(/\D/g, ''), 10) || filterMin;
+
+				value = Math.min(Math.max(value, filterMin), filterMax);
+
+				filterRangeInput.value = isDays
+					? formatDays(value)
+					: value.toLocaleString('ru-RU');
+
+				filterRange.noUiSlider.set(value);
+			}
+			filter.addEventListener('reset', () => {
+				filterRange.noUiSlider.set([filterMin]);
+			});
+		});
+	}
 });
