@@ -974,4 +974,35 @@ document.addEventListener('DOMContentLoaded', function(){
 			});
 		});
 	}
+
+	if(document.querySelector('.magazine-catalog__slider')){
+		new Swiper('.magazine-catalog__slider', {
+			slidesPerView: 2,
+			spaceBetween: 20,
+			loop: false,
+			speed: 600,
+			navigation: {
+				nextEl: '.magazine-catalog__next',
+				prevEl: '.magazine-catalog__prev',
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+				},
+				601: {
+					slidesPerView: 2,
+				},
+				881: {
+					slidesPerView: 3,
+				},
+				1023: {
+					slidesPerView: 1,
+				},
+				1091: {
+					slidesPerView: 2,
+				},
+			}
+		});
+	}
+
 });
