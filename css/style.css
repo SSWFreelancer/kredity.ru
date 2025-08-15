@@ -4727,6 +4727,7 @@ body.popuplock {
   line-height: 1.2173913043;
 }
 .benefits__top b {
+  font-weight: 600;
   line-height: 1.11;
   font-size: 86px;
 }
