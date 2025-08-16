@@ -1005,4 +1005,21 @@ document.addEventListener('DOMContentLoaded', function(){
 		});
 	}
 
+	let copyBtns = document.querySelectorAll('.approach__mail button');
+	if(copyBtns){
+		copyBtns.forEach((copyBtn) => {
+			copyBtn.addEventListener('click', function () {
+				const textToCopy = this.previousElementSibling.textContent.trim();
+
+				navigator.clipboard.writeText(textToCopy).then(() => {
+					const notification = copyBtn.querySelector('.copy-notification');
+					notification.classList.add('show');
+					setTimeout(() => {
+						notification.classList.remove('show');
+					}, 500);
+				});
+			});
+		});
+	}
+
 });
