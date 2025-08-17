@@ -1067,5 +1067,28 @@ document.addEventListener('DOMContentLoaded', function(){
 			}
 		});
 	}
-
+	if(document.querySelector('.examples__slider')){
+		new Swiper('.examples__slider', {
+			slidesPerView: 1,
+			spaceBetween: 24,
+			loop: false,
+			speed: 600,
+			navigation: {
+				nextEl: '.examples__next',
+				prevEl: '.examples__prev',
+			},
+			pagination: {
+				el: '.examples__pagination',
+				clickable: true,
+			}
+		});
+	}
+	let commentMore = document.querySelectorAll('.comment__more');
+	if(commentMore){
+		commentMore.forEach((commentMore) => {
+			commentMore.addEventListener('click', function () {
+				commentMore.parentNode.classList.toggle('active');
+			});
+		});
+	}
 });
